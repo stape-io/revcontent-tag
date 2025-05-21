@@ -413,7 +413,7 @@ if (useOptimisticScenario) {
 
 function handlePageViewEvent(data) {
   const url = eventData.page_location || getRequestHeader('referer');
-  if (!url) return;
+  if (!url) return data.gtmOnSuccess();
 
   const cookieOptions = {
     domain: data.cookieDomain || 'auto',
