@@ -14,7 +14,8 @@ const parseUrl = require('parseUrl');
 const sendHttpRequest = require('sendHttpRequest');
 const setCookie = require('setCookie');
 
-/**********************************************************************************************/
+/*==============================================================================
+==============================================================================*/
 
 const traceId = getRequestHeader('trace-id');
 
@@ -22,7 +23,7 @@ const eventData = getAllEventData();
 
 const useOptimisticScenario = isUIFieldTrue(data.useOptimisticScenario);
 
-if (!isConsentGivenOrNotRequired()) {
+if (!isConsentGivenOrNotRequired(data, eventData)) {
   return data.gtmOnSuccess();
 }
 
@@ -47,8 +48,9 @@ if (useOptimisticScenario) {
   return data.gtmOnSuccess();
 }
 
-/**********************************************************************************************/
-// Vendor related functions
+/*==============================================================================
+Vendor related functions
+==============================================================================*/
 
 function handlePageViewEvent(data) {
   const url = eventData.page_location || getRequestHeader('referer');
@@ -167,8 +169,9 @@ function handleConversionEvent(data, eventData) {
   );
 }
 
-/**********************************************************************************************/
-// Helpers
+/*==============================================================================
+Helpers
+==============================================================================*/
 
 function isUIFieldTrue(field) {
   return [true, 'true'].indexOf(field) !== -1;
@@ -180,7 +183,8 @@ function isValidValue(value) {
 }
 
 function enc(data) {
-  return encodeUriComponent(makeString(data || ''));
+  if (['null', 'undefined'].indexOf(getType(data)) !== -1) data = '';
+  return encodeUriComponent(makeString(data));
 }
 
 function isConsentGivenOrNotRequired() {
