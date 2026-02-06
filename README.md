@@ -36,16 +36,21 @@ The **RevContent Tag for GTM Server-Side** enables server-to-server (S2S) conver
 **WARNING:** This tracking method should **not** be used together with RevContent conversion pixels on your site. Using both simultaneously will cause duplicate conversions to be reported. Use one or the other.
 
 For **mobile app conversions**, the Click ID (`rc_uuid`) must be stored and retrieved using alternative methods such as:
-  - The [Stape Store Writer tag](https://stape.io/helpdesk/documentation/stape-store-feature#how-to-use-the-stape-store-writer-tag) and [Stape Store Lookup variable](https://stape.io/helpdesk/documentation/stape-store-feature#stape-store-lookup-variable)
-  - The [Firestore Writer tag](https://stape.io/blog/write-data-to-firestore-from-server-google-tag-manager) and [Firestore Restore variable](https://stape.io/solutions/firestore-restore-variable)
 
-  These approaches help persist and access the Click ID for app environments where URL parameters and cookies are not available.
+- The [Stape Store Writer tag](https://stape.io/helpdesk/documentation/stape-store-feature#how-to-use-the-stape-store-writer-tag) and [Stape Store Lookup variable](https://stape.io/helpdesk/documentation/stape-store-feature#stape-store-lookup-variable)
+- The [Firestore Writer tag](https://stape.io/blog/write-data-to-firestore-from-server-google-tag-manager) and [Firestore Restore variable](https://stape.io/solutions/firestore-restore-variable)
+
+These approaches help persist and access the Click ID for app environments where URL parameters and cookies are not available.
 
 ## Benefits of Using Server-Side Tracking with RevContent
 
 - ✅ **Reliable Conversion Tracking** — Server-to-server calls bypass client-side blockers and limitations.
 - 🔒 **Improved Data Privacy** — Allows you to redact or override user IP and user agent.
 - ⚡ **Faster Response Times** — The Optimistic Scenario option allows faster tag execution by skipping API wait.
+
+## Useful links:
+
+- [Step-by-step guide on how to configure RevContent Tag](https://stape.io/helpdesk/documentation/revcontent-tag)
 
 ## Open Source
 
