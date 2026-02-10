@@ -1,7 +1,7 @@
 homepage: 'https://stape.io/'
 documentation: 'https://github.com/stape-io/revcontent-tag'
 versions:
-  - sha: 22b557bdb848a8ab753a497e2929cd21289a963d
+  - sha: 2f3b262d8558af9d145de606ddc8093d72e18b8c
     changeNotes: Updated consent section.
   - sha: 562ffdbc2bb3843097934bf753c32dd51b7a7a87
     changeNotes: Initial release.
