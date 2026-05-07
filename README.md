@@ -55,3 +55,6 @@ These approaches help persist and access the Click ID for app environments where
 ## Open Source
 
 The **RevContent Tag for GTM Server-Side** is developed and maintained by the [Stape Team](https://stape.io/) under the Apache 2.0 license.
+
+### GTM Gallery Status
+🟢 [Listed](https://tagmanager.google.com/gallery/#/owners/stape-io/templates/revcontent-tag)
