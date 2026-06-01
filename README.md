@@ -18,9 +18,6 @@ The **RevContent Tag for GTM Server-Side** enables server-to-server (S2S) conver
    - Optionally override the **User IP Address** and **User Agent**.
    - Enable **Use Optimistic Scenario** to speed up tag execution by firing success immediately without waiting for API response.
 5. Configure **Consent Settings** to control whether data is sent always or only if marketing consent is given.
-6. Optionally enable **Logging**:
-   - Console logs during preview/debug or always.
-   - BigQuery logs for storing event data in your Google Cloud project.
 
 ## Required Fields
 
